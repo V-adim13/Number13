@@ -2,74 +2,74 @@ package ru.netology.untitled;
 
 //Сумму всех продаж
 public class StaticService {
-    public long AmountMonth(long[] sales) {
-        long AmountMonth = 0;
+    public long amountMonth(long[] sales) {
+        long amountMonth = 0;
 
         for (long sale : sales) {
-            AmountMonth += sale;
+            amountMonth += sale;
 
         }
-        return AmountMonth;
+        return amountMonth;
 
     }
 
 //Среднюю сумму продаж в месяц
 
 
-    public long AverageNumber(long[] sales) {
+    public long averageNumber(long[] sales) {
 
-        long AmountMonth = AmountMonth(sales);
+        long amountMonth = amountMonth(sales);
 
-        return AmountMonth / 12;
+        return amountMonth / 12;
     }
 
     //Номер месяца, в котором был пик продаж (осуществлены продажи на максимальную сумму)*
 //Пик продаж 5,7 месяц , как сделать что бы выдать два числа ?
-    public int MaxxSales(long[] sales) {
-        int MaxxMonth = 0;
+    public int maxxSales(long[] sales) {
+        int maxxMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[MaxxMonth]) {
-                MaxxMonth = i;
+            if (sales[i] >= sales[maxxMonth]) {
+                maxxMonth = i;
             }
         }
-        return MaxxMonth;
+        return maxxMonth;
     }
 
     //Номер месяца, в котором был минимум продаж (осуществлены продажи на минимальную сумму)*
-    public int MiniSales(long[] sales) {
-        int MinMonth = 0;
+    public int miniSales(long[] sales) {
+        int minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[MinMonth])
-                MinMonth = i;
+            if (sales[i] <= sales[minMonth])
+                minMonth = i;
         }
-        return MinMonth;
+        return minMonth;
     }
 
 
 //Кол-во месяцев, в которых продажи были ниже среднего (см. п.2)
 
-    public int MinAverageSales(long[] sales) {
-        int MinAverage = 0;
-        long amo = AverageNumber(sales);
+    public int minAverageSales(long[] sales) {
+        int minAverage = 0;
+        long amo = averageNumber(sales);
         for (long sale : sales) {
             if (sale < amo) {
-                MinAverage++;
+                minAverage++;
 
             }
         }
-        return MinAverage;
+        return minAverage;
     }
     //Кол-во месяцев, в которых продажи были выше среднего (см. п.2)
 
-    public int MaxAverageSales(long[] sales) {
-        int MaxAverage = 0;
-        long amo = AverageNumber(sales);
+    public int maxAverageSales(long[] sales) {
+        int maxAverage = 0;
+        long amo = averageNumber(sales);
         for (long sale : sales) {
             if (sale > amo) {
-                MaxAverage++;
+                maxAverage++;
 
             }
         }
-        return MaxAverage;
+        return maxAverage;
     }
 }

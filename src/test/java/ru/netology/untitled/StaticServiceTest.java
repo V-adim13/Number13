@@ -12,7 +12,7 @@ public class StaticServiceTest {
     public void shouldAmountMonth() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.AmountMonth(sales);
+        long actual = service.amountMonth(sales);
         long expected = 180;
 
         assertEquals(expected, actual);
@@ -25,7 +25,7 @@ public class StaticServiceTest {
     public void shouldAverageNumber() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.AmountMonth(sales) / 12;
+        long actual = service.amountMonth(sales) / 12;
         long expected = 15;
         assertEquals(expected, actual);
 
@@ -36,7 +36,7 @@ public class StaticServiceTest {
     public void shouldMaxxSales() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.MaxxSales(sales);
+        long actual = service.maxxSales(sales);
         long expected = 7;
 
         assertEquals(expected, actual);
@@ -49,7 +49,7 @@ public class StaticServiceTest {
     public void shouldMiniSales() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.MiniSales(sales);
+        long actual = service.miniSales(sales);
         long expected = 8;
 
         assertEquals(expected, actual);
@@ -61,7 +61,7 @@ public class StaticServiceTest {
     public void shouldMinAverageSales() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.MinAverageSales(sales);
+        long actual = service.minAverageSales(sales);
         long expected = 5;
 
         assertEquals(expected, actual);
@@ -72,7 +72,7 @@ public class StaticServiceTest {
     public void shouldMaxAverageSales() {
         StaticService service = new StaticService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long actual = service.MinAverageSales(sales);
+        long actual = service.minAverageSales(sales);
         long expected = 5;
 
         assertEquals(expected, actual);
